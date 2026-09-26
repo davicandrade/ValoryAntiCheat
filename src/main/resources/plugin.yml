@@ -9,7 +9,7 @@ softdepend: [ValoryPunish, LuckPerms, TAB, ViaVersion, ViaBackwards, floodgate, 
 commands:
   vac:
     aliases: [anticheat]
-    description: Valory AntiCheat administration
+    description: Administração do Valory AntiCheat
 permissions:
   valoryanticheat.admin:
     default: op

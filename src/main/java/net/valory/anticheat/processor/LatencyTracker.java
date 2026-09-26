@@ -1,8 +1,5 @@
 package net.valory.anticheat.processor;
 
-/**
- * At most one outstanding unguessable ping, matched once. Unsolicited/stale ACKs cannot update RTT.
- */
 public final class LatencyTracker {
   private int token;
   private long sent;

@@ -1,10 +1,9 @@
 package net.valory.anticheat.math;
 
-/** Immutable world-space collision box; ray distances require a unit direction. */
 public record Box(double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {
   public Box {
     if (!(minX <= maxX && minY <= maxY && minZ <= maxZ))
-      throw new IllegalArgumentException("Invalid bounds");
+      throw new IllegalArgumentException("Limites inválidos");
   }
 
   public Box expand(double d) {

@@ -3,7 +3,6 @@ package net.valory.anticheat.packet;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.atomic.*;
 
-/** Bounded MPSC queue: independent outbound and inbound Netty producers, main-thread consumer. */
 public final class PacketInbox {
   private final ArrayBlockingQueue<PacketFrame> queue;
   public final LongAdder received = new LongAdder(), dropped = new LongAdder();

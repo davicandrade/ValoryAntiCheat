@@ -28,7 +28,7 @@ public final class NoNetworkAdapter implements NetworkAdapter {
 
   public CompletableFuture<String> punish(Player p, String e, String r, String n) {
     return CompletableFuture.failedFuture(
-        new IllegalStateException("Valory integration unavailable"));
+        new IllegalStateException("Integração Valory indisponível"));
   }
 
   public String status() {

@@ -6,7 +6,6 @@ import net.valory.anticheat.math.*;
 import net.valory.anticheat.packet.PacketFrame;
 import net.valory.anticheat.state.PlayerData;
 
-/** Placement evidence combines geometry, motion and ordering; placement rate alone never flags. */
 public final class BlockActionChecks implements Check {
   public String name() {
     return "BlockAction";

@@ -2,7 +2,6 @@ package net.valory.anticheat.prediction;
 
 import net.valory.anticheat.math.Vec3;
 
-/** Vanilla simple-terrain hypothesis envelope. Explicitly not a complete Minecraft simulator. */
 public final class MovementPrediction {
   public record Input(
       Vec3 previousDelta,
@@ -18,7 +17,6 @@ public final class MovementPrediction {
 
   public Envelope predict(Input in) {
     double drag = in.previousGround() ? in.friction() * .91 : .91;
-    // Unknown input is maximized over all directions; attribute already includes sprint/effects.
     double acceleration =
         in.previousGround() ? in.movementSpeed() * .21600002 / Math.pow(in.friction(), 3) : .026;
     double horizontal = in.previousDelta().horizontal() * drag + acceleration;

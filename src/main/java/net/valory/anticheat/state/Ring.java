@@ -2,7 +2,6 @@ package net.valory.anticheat.state;
 
 import java.util.*;
 
-/** Single-owner fixed-capacity ring. Offset zero is newest. */
 public final class Ring<T> {
   private final Object[] entries;
   private int next, size;

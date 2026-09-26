@@ -6,10 +6,6 @@ import net.valory.anticheat.math.*;
 import net.valory.anticheat.packet.*;
 import net.valory.anticheat.state.*;
 
-/**
- * Conservative server-history rewind, experimental until per-observer entity replication is
- * implemented.
- */
 public final class CombatChecks implements Check {
   public String name() {
     return "Combat";
@@ -90,7 +86,5 @@ public final class CombatChecks implements Check {
           "Ray missed all candidate hitboxes",
           debug,
           p.nanos());
-    // These geometric checks share one independence group: they cannot corroborate each other for
-    // bans.
   }
 }

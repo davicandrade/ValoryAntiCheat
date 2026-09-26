@@ -3,10 +3,6 @@ package net.valory.anticheat.compatibility;
 import java.util.UUID;
 import org.bukkit.Bukkit;
 
-/**
- * Optional adapters resolve only when their owning plugin is enabled. No reflection or name-prefix
- * guessing.
- */
 public final class ClientClassifier {
   public enum Identity {
     JAVA,
@@ -20,7 +16,6 @@ public final class ClientClassifier {
     try {
       if (floodgate && FloodgateIdentity.isBedrock(player)) return Identity.BEDROCK;
       if (geyser) return GeyserIdentity.isBedrock(player) ? Identity.BEDROCK : Identity.JAVA;
-      // A false backend Floodgate result cannot establish that proxy identity forwarding works.
       if (floodgate && conservative) return Identity.BRIDGE_UNKNOWN;
     } catch (LinkageError | IllegalStateException unavailable) {
       return Identity.BRIDGE_UNKNOWN;

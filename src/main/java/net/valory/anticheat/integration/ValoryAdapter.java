@@ -9,7 +9,6 @@ import net.valory.anticheat.check.CheckResult;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-/** Optional bridge that deliberately has no compile-time dependency on ValoryPunish. */
 public final class ValoryAdapter implements NetworkAdapter {
   private final Plugin punish;
 

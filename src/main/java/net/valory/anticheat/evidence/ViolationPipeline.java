@@ -147,7 +147,7 @@ public final class ViolationPipeline {
             + d.history.snapshot();
     if (!store.append(
         new EvidenceRecord(d.uuid, d.name, settings.server, r, risk, vl, context, d.evidenceId)))
-      d.lastDebug = "Evidence storage unavailable/full";
+      d.lastDebug = "Armazenamento de evidências indisponível ou cheio";
     if (vl >= policy.alert() && now - d.lastAlert >= 2_000_000_000L) {
       d.lastAlert = now;
       Component alert =
@@ -207,7 +207,7 @@ public final class ViolationPipeline {
                       () -> {
                         punishing.remove(d.uuid);
                         if (error != null) {
-                          plugin.getLogger().severe("VAC punishment not committed: " + error);
+    plugin.getLogger().severe("Punição VAC não confirmada: " + error);
                           return;
                         }
                         d.punishmentId = id;

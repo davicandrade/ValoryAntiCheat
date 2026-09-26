@@ -1,6 +1,5 @@
 package net.valory.anticheat.processor;
 
-/** Primitive sliding window. Statistics are computed once per full window, not every rotation. */
 public final class RotationSeries {
   private final double[] deltas = new double[64];
   private int count;

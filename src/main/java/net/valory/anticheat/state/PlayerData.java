@@ -9,7 +9,6 @@ import net.valory.anticheat.processor.*;
 import net.valory.anticheat.risk.*;
 import net.valory.anticheat.world.*;
 
-/** All fields except inbox are main-thread confined. No Player references retained. */
 public final class PlayerData {
   public final UUID uuid;
   public final String name;

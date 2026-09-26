@@ -3,7 +3,6 @@ package net.valory.anticheat.risk;
 import java.util.*;
 import net.valory.anticheat.check.CheckResult;
 
-/** Decayed evidence index [0,100], NOT a calibrated posterior probability. */
 public final class RiskEngine {
   private static final class Bucket {
     double value;

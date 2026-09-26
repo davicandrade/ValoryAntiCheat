@@ -23,7 +23,6 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
-/** Aggregate main-thread state machine. Packet producers only see independently owned inboxes. */
 public final class VacEngine implements AntiCheatService, CheckContext, AutoCloseable {
   private final org.bukkit.plugin.java.JavaPlugin plugin;
   private Settings settings;

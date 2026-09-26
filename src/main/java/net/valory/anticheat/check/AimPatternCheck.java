@@ -6,9 +6,6 @@ import net.valory.anticheat.packet.PacketFrame;
 import net.valory.anticheat.processor.RotationSeries;
 import net.valory.anticheat.state.PlayerData;
 
-/**
- * Weak statistical evidence only. Constant mouse motion is a legitimate alternative explanation.
- */
 public final class AimPatternCheck implements Check {
   public String name() {
     return "AimPattern";

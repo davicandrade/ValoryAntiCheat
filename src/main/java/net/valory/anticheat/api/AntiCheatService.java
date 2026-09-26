@@ -5,7 +5,6 @@ import java.util.*;
 import net.valory.anticheat.check.CheckResult;
 import net.valory.anticheat.math.Vec3;
 
-/** Bukkit ServicesManager API. Call on primary thread; snapshots are immutable. */
 public interface AntiCheatService {
   double risk(UUID player);
 

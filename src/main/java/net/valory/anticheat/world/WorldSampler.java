@@ -7,7 +7,6 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.util.BoundingBox;
 
-/** One local collision snapshot per server tick, never on the network thread. No chunk loads. */
 public final class WorldSampler {
   public Environment sample(Player p, long now) {
     Location l = p.getLocation();
@@ -48,7 +47,6 @@ public final class WorldSampler {
             reason = n;
           }
           for (BoundingBox box : b.getCollisionShape().getBoundingBoxes()) {
-            // Bukkit VoxelShape boxes are local block coordinates.
             solids.add(
                 new Box(
                     box.getMinX() + x,

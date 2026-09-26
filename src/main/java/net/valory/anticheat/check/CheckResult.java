@@ -3,7 +3,6 @@ package net.valory.anticheat.check;
 import java.util.*;
 import net.valory.anticheat.api.Family;
 
-/** confidence denotes completeness of the model, never a probability that someone cheats. */
 public record CheckResult(
     String check,
     String subtype,

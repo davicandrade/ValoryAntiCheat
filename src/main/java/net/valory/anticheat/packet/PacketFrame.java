@@ -1,6 +1,5 @@
 package net.valory.anticheat.packet;
 
-/** Transport-neutral decoded primitive payload. No Bukkit or retained Netty buffers. */
 public record PacketFrame(
     Kind kind,
     long nanos,

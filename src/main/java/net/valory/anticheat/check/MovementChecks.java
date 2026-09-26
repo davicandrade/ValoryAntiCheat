@@ -55,7 +55,6 @@ public final class MovementChecks implements Check {
                 && change.y() >= -.03
                 && d.delta.y() <= .03,
             8);
-    // Jump reversal is an edge, not a sustained state. VL requires recurring edges.
     boolean airJump = !d.ground && !d.serverGround && d.delta.y() < -.1 && change.y() > .2;
     boolean step = d.ground && change.y() > e.maxY();
     Box body = Box.player(next, d.width, d.height);
@@ -75,7 +74,6 @@ public final class MovementChecks implements Check {
     boolean phase =
         c.streak(d, "Phase.A", !d.environment.clear(body.expand(-.02)) && change.length() > .03, 8);
     if (!(speed || fly || airJump || step || noFall || spider || phase)) return;
-    // Allocate evidence only on inconsistencies, not on ordinary movement.
     Map<String, String> debug =
         Map.of(
             "deltaXZ",

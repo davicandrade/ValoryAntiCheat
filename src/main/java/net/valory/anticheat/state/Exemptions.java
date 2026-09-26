@@ -3,7 +3,6 @@ package net.valory.anticheat.state;
 import java.util.*;
 import net.valory.anticheat.api.*;
 
-/** Monotonic clock deadlines. Source removal cannot erase another plugin's lease. */
 public final class Exemptions {
   private record Key(ExemptionType type, String source) {}
 
@@ -15,7 +14,7 @@ public final class Exemptions {
         || source.isBlank()
         || source.length() > 80
         || duration <= 0
-        || duration > 3_600_000_000_000L) throw new IllegalArgumentException("Invalid lease");
+        || duration > 3_600_000_000_000L) throw new IllegalArgumentException("Isenção inválida");
     Key key = new Key(type, source);
     expire(now);
     if (!deadlines.containsKey(key) && deadlines.size() >= 32)

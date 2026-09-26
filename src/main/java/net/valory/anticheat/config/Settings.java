@@ -62,7 +62,7 @@ public final class Settings {
     prefix = load(plugin, "messages.yml").getString("prefix", "[VAC]");
     Map<String, Policy> out = new LinkedHashMap<>();
     var section = check.getConfigurationSection("checks");
-    if (section == null) throw new IllegalArgumentException("checks.yml: missing checks");
+    if (section == null) throw new IllegalArgumentException("checks.yml: checks ausentes");
     for (String key : section.getKeys(false)) {
       String path = "checks." + key;
       out.put(
@@ -81,7 +81,7 @@ public final class Settings {
         throw new IllegalArgumentException("Unregistered check: " + e.getKey());
       Policy p = e.getValue();
       if (!java.util.Set.of("informational", "alert", "setback-only").contains(p.action()))
-        throw new IllegalArgumentException("Unsupported classification: " + e.getKey());
+      throw new IllegalArgumentException("Classificação não suportada: " + e.getKey());
       if (p.alert() > p.setback() || p.setback() > p.punish())
         throw new IllegalArgumentException("Threshold order: " + e.getKey());
     }
@@ -94,12 +94,12 @@ public final class Settings {
 
   private static double number(double n, double min, double max) {
     if (!Double.isFinite(n) || n < min || n > max)
-      throw new IllegalArgumentException("Invalid numeric setting: " + n);
+    throw new IllegalArgumentException("Configuração numérica inválida: " + n);
     return n;
   }
 
   private static int integer(int n, int min, int max) {
-    if (n < min || n > max) throw new IllegalArgumentException("Invalid integer setting: " + n);
+    if (n < min || n > max) throw new IllegalArgumentException("Configuração inteira inválida: " + n);
     return n;
   }
 }

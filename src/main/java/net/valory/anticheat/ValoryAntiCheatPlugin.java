@@ -34,7 +34,7 @@ public final class ValoryAntiCheatPlugin extends JavaPlugin {
               "VAC 1.0.0: observação e evidência ativas; punição automática permanece opt-in. "
                   + adapter.status());
     } catch (Exception | LinkageError failure) {
-      getLogger().log(java.util.logging.Level.SEVERE, "VAC startup failed", failure);
+      getLogger().log(java.util.logging.Level.SEVERE, "Falha ao iniciar o VAC", failure);
       getServer().getPluginManager().disablePlugin(this);
     }
   }

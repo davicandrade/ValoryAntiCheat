@@ -1,6 +1,5 @@
 package net.valory.anticheat.processor;
 
-/** Leaky time budget. A two-second burst allowance absorbs coalescing; idle credit is capped. */
 public final class MovementClock {
   private long previous;
   private double debt;

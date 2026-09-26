@@ -3,7 +3,6 @@ package net.valory.anticheat.world;
 import java.util.*;
 import net.valory.anticheat.math.*;
 
-/** Main-thread sample. Unknown or special physics deliberately returns no movement verdict. */
 public record Environment(
     long nanos,
     UUID world,

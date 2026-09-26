@@ -7,7 +7,6 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
 
-/** A bounded single-writer actor. No SQL/serialization on the main or Netty thread. */
 public final class SqliteEvidenceStore implements EvidenceStore {
   private final ThreadPoolExecutor io;
   private final Logger log;
@@ -102,7 +101,7 @@ public final class SqliteEvidenceStore implements EvidenceStore {
   public CompletableFuture<List<String>> recent(UUID player, int limit) {
     CompletableFuture<List<String>> result = new CompletableFuture<>();
     if (!ready) {
-      result.completeExceptionally(new IllegalStateException("Storage unavailable"));
+      result.completeExceptionally(new IllegalStateException("Armazenamento indisponível"));
       return result;
     }
     try {

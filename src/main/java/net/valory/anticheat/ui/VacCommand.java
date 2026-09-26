@@ -14,9 +14,6 @@ import org.bukkit.event.inventory.*;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 
-/**
- * Inventory ownership, pagination and command authorization are checked independently of item text.
- */
 public final class VacCommand implements CommandExecutor, TabCompleter, Listener {
   private final ValoryAntiCheatPlugin plugin;
   private final VacEngine engine;

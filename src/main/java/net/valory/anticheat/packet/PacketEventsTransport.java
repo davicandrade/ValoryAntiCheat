@@ -11,7 +11,6 @@ import com.github.retrooper.packetevents.wrapper.play.server.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-/** The ONLY PacketEvents-dependent implementation. Netty callbacks never use Bukkit. */
 public final class PacketEventsTransport implements PacketTransport {
   private final ConcurrentMap<UUID, PacketInbox> inboxes;
   private final ConcurrentMap<UUID, User> users = new ConcurrentHashMap<>();
