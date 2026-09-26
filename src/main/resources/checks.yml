@@ -1,0 +1,162 @@
+# Confidence is model quality, never probability of cheating.
+checks:
+  Speed_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: setback-only
+  Fly_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: setback-only
+  AirJump_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Step_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Phase_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Timer_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Reach_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Hitbox_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  AutoClicker_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: informational
+  MultiAura_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: informational
+  BadPackets_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  InvalidMove_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  ImpossiblePlace_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  ImpossibleBreak_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Scaffold_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: informational
+  FastPlace_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  AimAssist_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: informational
+  BadPackets_B:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  NoFall_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert
+  Spider_A:
+    enabled: true
+    alert-threshold: 6
+    setback-threshold: 18
+    punish-threshold: 50
+    decay: 30
+    weight: 1
+    classification: alert

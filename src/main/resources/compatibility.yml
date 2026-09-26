@@ -1,0 +1,3 @@
+# If Geyser/Floodgate is present but identity is unknown, retain protocol checks only.
+# A trusted plugin can register per-player identity through AntiCheatService.clientProfile.
+unknown-bridge-disable-java-checks: true

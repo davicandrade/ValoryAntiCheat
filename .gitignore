@@ -1,0 +1,9 @@
+target/
+*.db
+*.db-shm
+*.db-wal
+logs/
+*.jar
+!mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml

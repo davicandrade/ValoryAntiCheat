@@ -1,0 +1,3 @@
+enabled: false
+# Deixe desligado até concluir a calibração com replays reais. Quando habilitado,
+# a política exige evidências independentes e um replay durável do ValoryPunish.

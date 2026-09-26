@@ -1,0 +1,81 @@
+name: ValoryAntiCheat
+version: 1.0.0
+main: net.valory.anticheat.ValoryAntiCheatPlugin
+api-version: '1.21'
+description: Análise de pacotes, evidências e risco calibrável para Paper.
+author: Rede Valory
+depend: [packetevents]
+softdepend: [ValoryPunish, LuckPerms, TAB, ViaVersion, ViaBackwards, floodgate, Geyser-Spigot]
+commands:
+  vac:
+    aliases: [anticheat]
+    description: Valory AntiCheat administration
+permissions:
+  valoryanticheat.admin:
+    default: op
+    children:
+      valoryanticheat.alerts: true
+      valoryanticheat.debug: true
+      valoryanticheat.logs: true
+      valoryanticheat.gui: true
+      valoryanticheat.profile: true
+  valoryanticheat.alerts:
+    default: op
+  valoryanticheat.debug:
+    default: op
+  valoryanticheat.logs:
+    default: op
+  valoryanticheat.gui:
+    default: op
+  valoryanticheat.profile:
+    default: op
+  valoryanticheat.bypass:
+    default: false
+  valoryanticheat.bypass.movement:
+    default: false
+  valoryanticheat.bypass.combat:
+    default: false
+  valoryanticheat.bypass.action:
+    default: false
+  valoryanticheat.bypass.packet:
+    default: false
+  valoryanticheat.bypass.timing:
+    default: false
+  valoryanticheat.bypass.aimassist:
+    default: false
+  valoryanticheat.bypass.airjump:
+    default: false
+  valoryanticheat.bypass.autoclicker:
+    default: false
+  valoryanticheat.bypass.badpackets:
+    default: false
+  valoryanticheat.bypass.fastplace:
+    default: false
+  valoryanticheat.bypass.fly:
+    default: false
+  valoryanticheat.bypass.hitbox:
+    default: false
+  valoryanticheat.bypass.impossiblebreak:
+    default: false
+  valoryanticheat.bypass.impossibleplace:
+    default: false
+  valoryanticheat.bypass.invalidmove:
+    default: false
+  valoryanticheat.bypass.multiaura:
+    default: false
+  valoryanticheat.bypass.nofall:
+    default: false
+  valoryanticheat.bypass.phase:
+    default: false
+  valoryanticheat.bypass.reach:
+    default: false
+  valoryanticheat.bypass.scaffold:
+    default: false
+  valoryanticheat.bypass.speed:
+    default: false
+  valoryanticheat.bypass.spider:
+    default: false
+  valoryanticheat.bypass.step:
+    default: false
+  valoryanticheat.bypass.timer:
+    default: false

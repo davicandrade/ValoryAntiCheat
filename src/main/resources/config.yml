@@ -1,0 +1,7 @@
+server-id: valory-paper
+# Observation release: calibrate with real replay samples before enabling corrections.
+setbacks: false
+packets-per-player-per-tick: 64
+# Packet-processing budget, environment sampling is measured separately in total tick cost.
+processing-budget-ms: 4.0
+retention-days: 30
